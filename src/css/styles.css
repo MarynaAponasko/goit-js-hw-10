@@ -18,3 +18,28 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+ .country-list{
+  padding-left: 10px;
+ }
+.country-item{
+  list-style: none;
+  margin-bottom: 10px;
+}
+ .btnChoseCountry{
+  border: 0px;
+  border-color: transparent;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+   font-size: 18px;
+ }
+ .btnChoseCountry:hover,
+ .btnChoseCountry:focus{
+  text-decoration: underline;
+ }
+
+
+ .country-flag{
+  width: 100px; 
+  margin-right: 15px;
+ }
