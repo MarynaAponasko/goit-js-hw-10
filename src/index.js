@@ -17,11 +17,11 @@ refs.input.addEventListener(
 
 function onChangeInputValue(e) {
   console.log(e.target.value);
-  if (e.target.value === '') {
+  if (e.target.value.trim() === '') {
     onClearMarkup();
     return;
   }
-  fetchCountries(e.target.value)
+  fetchCountries(e.target.value.trim())
     .then(countries => {
       console.log(countries);
       if (countries.length > 10) {
@@ -86,6 +86,7 @@ function onCreateDetalinfo(countries) {
 }
 
 function onError() {
+  onClearMarkup();
   Notiflix.Notify.failure('Oops, there is no country with that name');
 }
 function onClearMarkup() {
